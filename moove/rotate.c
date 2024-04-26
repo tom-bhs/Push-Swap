@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tombihoues <tombihoues@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/29 17:35:42 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/04/26 11:43:37 by tombihoues       ###   ########.fr       */
+/*   Created: 2024/04/26 11:48:22 by tombihoues        #+#    #+#             */
+/*   Updated: 2024/04/26 11:53:16 by tombihoues       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "../inc/push_swap.h"
+
+void rotate(t_stack *stack)
+{
+    t_node *first, *last;
+
+    if (stack->top == NULL || stack->top->next == NULL)
+        return;
+
+    first = stack->top;
+    last = stack->top;
 
 
-#include "stdlib.h"
+while (last->next != NULL)
+{
+    last =last->next;
+}
 
-
-typedef struct s_node	{
-	int value;
-	struct s_node *next;
-}	t_node;
-
-
-
-typedef struct s_stack	{
-	t_node *top;
-}	t_stack;
-
-
-#endif
+stack->top = first->next;
+first->next = NULL;
+last->next = first;
+}

@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tombihoues <tombihoues@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/29 17:35:42 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/04/26 11:43:37 by tombihoues       ###   ########.fr       */
+/*   Created: 2024/04/26 11:44:00 by tombihoues        #+#    #+#             */
+/*   Updated: 2024/04/26 11:48:38 by tombihoues       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "../inc/push_swap.h"
 
+void swap(t_stack *stack)
+{
+    t_node *first, *second;
 
-#include "stdlib.h"
+    if (stack->top == NULL || stack->top->next == NULL)
+        return;
 
+    first = stack->top;
+    second = stack->top->next;
 
-typedef struct s_node	{
-	int value;
-	struct s_node *next;
-}	t_node;
-
-
-
-typedef struct s_stack	{
-	t_node *top;
-}	t_stack;
-
-
-#endif
+    first->next = second->next;
+    second->next = first;
+    stack->top = second;
+}
