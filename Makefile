@@ -18,7 +18,7 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $
+	$(CC) $(CFLAGS) -c src/main.c -o main.o
 
 clean:
 	rm -f $(OBJS)
