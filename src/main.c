@@ -6,14 +6,11 @@
 /*   By: tombihoues <tombihoues@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:33:24 by tombihoues        #+#    #+#             */
-/*   Updated: 2024/04/26 20:44:59 by tombihoues       ###   ########.fr       */
+/*   Updated: 2024/04/26 23:45:52 by tombihoues       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../inc/push_swap.h"
-
-#include <stdio.h>
-#include <stdlib.h>
+#include "../inc/push_swap.h"
 
 int main(int argc, char **argv)
 {
