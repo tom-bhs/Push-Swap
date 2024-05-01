@@ -6,7 +6,7 @@
 /*   By: tombihoues <tombihoues@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:35:42 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/04/26 23:46:19 by tombihoues       ###   ########.fr       */
+/*   Updated: 2024/05/01 12:02:43 by tombihoues       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,17 @@ typedef struct s_stack	{
 	t_node *top;
 }	t_stack;
 
-t_stack *initialize_stack(void);
-int fill_stack(t_stack *stack, int argc, char **argv);
-void sort_stack(t_stack *a, t_stack *b);
-void print_operations(void);
-void free_stack(t_stack *stack);
+int main(int argc, char **argv);
+void push(t_stack *from, t_stack *to);
+void reverse_rotate(t_stack *stack);
+void rotate(t_stack *stack);
+void swap(t_stack *stack);
+
+
+// t_stack *initialize_stack(void);
+// int fill_stack(t_stack *stack, int argc, char **argv);
+// void sort_stack(t_stack *a, t_stack *b);
+// void print_operations(void);
+// void free_stack(t_stack *stack);
 
 #endif

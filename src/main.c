@@ -6,11 +6,18 @@
 /*   By: tombihoues <tombihoues@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 20:33:24 by tombihoues        #+#    #+#             */
-/*   Updated: 2024/04/26 23:45:52 by tombihoues       ###   ########.fr       */
+/*   Updated: 2024/05/01 12:03:27 by tombihoues       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
+
+t_stack *initialize_stack(void);
+int fill_stack(t_stack *stack, int argc, char **argv);
+void sort_stack(t_stack *a, t_stack *b);
+void print_operations(void);
+void free_stack(t_stack *stack);
+
 
 int main(int argc, char **argv)
 {
