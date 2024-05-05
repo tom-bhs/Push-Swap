@@ -1,34 +1,32 @@
 NAME = push_swap
 
-CC = gcc
+CC = gcc 
 CFLAGS = -Wall -Wextra -Werror
-SRC_DIR = src
-OBJ_DIR = obj
 
-SRCS = $(SRC_DIR)/main.c $(SRC_DIR)/push.c $(SRC_DIR)/swap.c $(SRC_DIR)/rotate.c $(SRC_DIR)/reverse_rotate.c
-OBJS = $(SRCS:.c=.o)
+SRCS =	src/main.c \
+		src/push.c \
+		src/swap.c \
+		src/rotate.c \
+		src/reverse_rotate.c \
+		#src/utils.c \
 
-# Compilation principale
+OBJS = $(patsubst src/%,obj/%,$(SRCS:.c=.o))
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 
-# Règle pour compiler chaque fichier .c en fichier .o
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	mkdir -p $(OBJ_DIR)
+obj/%.o: src/%.c
+	mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Nettoie les fichiers objets
 clean:
-	rm -f $(OBJ_DIR)/*.o
+	rm -f $(OBJS)
 
-# Nettoie les fichiers objets et l'exécutable
 fclean: clean
 	rm -f $(NAME)
 
-# Recompilation complète
 re: fclean all
 
-# Empêche Make d'agir sur des fichiers de même nom
 .PHONY: all clean fclean re
