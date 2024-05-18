@@ -1,41 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/18 17:41:41 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/18 19:15:54 by tbihoues         ###   ########.fr       */
+/*   Created: 2024/01/29 16:36:43 by tbihoues          #+#    #+#             */
+/*   Updated: 2024/05/18 19:17:59 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-int main(int argc, char **argv)
+int is_sorted(t_stack *a)
 {
-	t_stack a;
-	t_stack b;
+	for (int i = 0; i < a->size - 1; i++)
+	{
+		if (a->data[i] > a->data[i + 1])
+			return (0);
+	}
+	return (1);
+}
 
-	if (argc < 2)
-		return (0);
-	
-	init_stack(&a, argc -1);
-	init_stack(&b, argc -1);
+void push_swap(t_stack *a, t_stack *b)
+{
+	while (!is_sorted(a))
+	{
+		if (a->data[0] > a->data[1])
+		{
+			sa(a);
+			write(1, "sa\n", 3);
+		}
+		else
+		{
+			pb(a, b);
+			write(1, "pb\n", 3);
+		}
+	}
 
-	parse_args(&a, argc, argv);
-
-
-	//pour afficher la pile pour verif le parsing
-	for (int i = 0; i < a.size; i++)
-		printf ("%d", a.data[i]);
-	printf("\n");
-	//boucle while et ft_printf
-
-	push_swap(&a, &b);
-
-	free(a.data);
-	free(b.data);
-
-	return (0);
+	while (b->size > 0)
+	{
+		pa(a, b);
+		write(1, "pa\n", 3);
+	}
 }

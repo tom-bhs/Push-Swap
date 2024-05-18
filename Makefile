@@ -1,32 +1,25 @@
 NAME = push_swap
 
-CC = gcc 
+SRC =	src/main.c \
+		src/push_swap.c \
+		src/operations.c \
+		src/utils.c
+OBJ = $(SRC:.c=.o)
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-
-SRCS =	src/main.c \
-		src/push.c \
-		src/swap.c \
-		src/rotate.c \
-		src/reverse_rotate.c \
-		#src/utils.c \
-
-OBJS = $(patsubst src/%,obj/%,$(SRCS:.c=.o))
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
-obj/%.o: src/%.c
-	mkdir -p $(@D)
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re

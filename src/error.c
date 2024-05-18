@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tombihoues <tombihoues@student.42.fr>      +#+  +:+       +#+        */
+/*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/26 11:41:38 by tombihoues        #+#    #+#             */
-/*   Updated: 2024/04/26 11:42:21 by tombihoues       ###   ########.fr       */
+/*   Created: 2024/01/31 19:06:26 by tbihoues          #+#    #+#             */
+/*   Updated: 2024/05/18 19:10:47 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/push_swap.h"
+//#include "push_swap.h"
 
-void push(t_stack *from, t_stack *to)
+void error(int argc, char **argv)
 {
-    t_node *temp;
-
-    if (from -> top == NULL)
-        return;
-    
-    temp = from -> top;
-    from ->top = from->top->next;
-    temp->next = to->top;
-    to ->top = temp;
+    if (argc == 1)
+        exit(0);
 }
