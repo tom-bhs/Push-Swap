@@ -6,7 +6,7 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 17:41:31 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/18 19:15:29 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/19 19:19:01 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,14 @@ void init_stack(t_stack *stack, int size)
 
 void parse_args(t_stack *a, int argc, char **argv)
 {
-    int i;
+	int i;
 
-    //mettre boucle while
-    for (i = 1; i < argc; i++)
-    {
-        a->data[a->size] = atoi(argv[i]);
-        a->size++; 
-    }
+	i = 1;
+	while (i < argc)
+	{
+		a->data[a->size] = atoi(argv[i]);
+		a->size++;
+		i++;
+	}
+
 }

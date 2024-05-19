@@ -6,7 +6,7 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 16:36:43 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/18 19:17:59 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/19 19:16:16 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,14 @@
 
 int is_sorted(t_stack *a)
 {
-	for (int i = 0; i < a->size - 1; i++)
+	int i;
+
+	i = 0;
+	while (i < a->size -1)
 	{
 		if (a->data[i] > a->data[i + 1])
 			return (0);
+		i++;
 	}
 	return (1);
 }

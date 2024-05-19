@@ -6,7 +6,7 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 17:40:09 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/19 18:37:45 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/19 19:12:15 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,9 +110,16 @@ void rb(t_stack *b)
 {
 	if (b->size > 1)
 	{
-		int temp = b->data[0];
-		for (int i = 0; i < b->size -1; i++)
+		int temp;
+		int i;
+
+		temp = b->data[0];
+		i = 0;
+		while (i < b->size - 1)
+		{
 			b->data[i] = b->data[i + 1];
+			i++;
+		}
 		b->data[b->size - 1] = temp;
 	}
 }
@@ -127,9 +134,16 @@ void rra(t_stack *a)
 {
 	if (a->size > 1)
 	{
-		int temp = a->data[a->size - 1];
-		for (int i = a->size - 1; i > 0; i--)
-			a->data[i] =a->data[i - 1];
+		int temp;
+		int i;
+
+		temp = a->data[a->size - 1];
+		i = a->size - 1;
+		while (i > 0)
+		{
+			a->data[i] = a->data[i - 1];
+			i--;
+		}
 		a->data[0] = temp;
 	}
 }
@@ -138,9 +152,16 @@ void rrb(t_stack *b)
 {
 	if (b->size > 1)
 	{
-		int temp = b->data[b->size - 1];
-		for (int i = b->size - 1; i > 0; i--)
+		int temp;
+		int i;
+
+		temp = b->data[b->size - 1];
+		i = b->size - 1;
+		while (i > 0)
+		{
 			b->data[i] = b->data[i - 1];
+			i--;
+		}
 		b->data[0] = temp;
 	}
 }
