@@ -6,7 +6,7 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 17:41:41 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/18 19:15:54 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/19 18:19:21 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,16 @@ int main(int argc, char **argv)
 
 
 	//pour afficher la pile pour verif le parsing
-	for (int i = 0; i < a.size; i++)
-		printf ("%d", a.data[i]);
+	int i;
+
+	i = 0;
+	while (i < a.size)
+	{
+		printf("%d", a.data[i]);
+		i++;
+	}
 	printf("\n");
-	//boucle while et ft_printf
+	//ft_printf
 
 	push_swap(&a, &b);
 
