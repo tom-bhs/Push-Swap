@@ -6,14 +6,13 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:35:42 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/21 22:35:42 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/21 23:39:50 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include "libft.h"
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -27,9 +26,11 @@ typedef struct	s_stack
 	int size;
 } t_stack;
 
-void init_stack(t_stack *stack, int size);
-void push_swap(t_stack *a, t_stack *b);
-void parse_args(t_stack *a, int argc, char **argv);
+void	init_stack(t_stack *stack, int size);
+void	push_swap(t_stack *a, t_stack *b);
+void	parse_args(t_stack *a, int argc, char **argv);
+int		get_max_bits(t_stack *stack);
+int		get_bit(int num, int bit);
 
 
 //		OPERATIONS
@@ -45,6 +46,11 @@ void rr(t_stack *a,t_stack *b);
 void rra(t_stack *a);
 void rrb(t_stack *b);
 void rrr(t_stack *a, t_stack *b);
+
+
+//		ERROR
+
+void	check_space(char *str);
 
 
 #endif

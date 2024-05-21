@@ -1,5 +1,10 @@
 
-mettre ft_printf
+mettre ft_printf et ft_atoi
+
+je doit faire tout les message derreur (mon premier messqge derreur ne fonctionne pas correctement)
+
+
+
 
 https://github.com/nessrinemaalem/push_swap
 

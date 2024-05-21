@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 19:06:26 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/18 19:10:47 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/21 23:43:15 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "push_swap.h"
+#include "../inc/push_swap.h"
 
-void error(int argc, char **argv)
-{
-    if (argc == 1)
-        exit(0);
-}
+// void	check_space(char *str)
+// {
+// 	int	i;
+
+// 	i = 0;
+// 	while (str[i] != '\0')
+// 	{
+// 		if (str[i] == ' ')
+// 			return ;
+// 		i++;
+// 	}
+// 	printf("Error\n"); //ft_printf
+// }

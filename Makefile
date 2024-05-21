@@ -3,6 +3,7 @@ NAME = push_swap
 SRC =	src/main.c \
 		src/push_swap.c \
 		src/operations.c \
+		src/ft_error.c \
 		src/utils.c
 OBJ = $(SRC:.c=.o)
 CC = gcc
