@@ -6,7 +6,7 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:35:42 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/18 19:20:12 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/21 22:35:42 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,22 @@ typedef struct	s_stack
 
 void init_stack(t_stack *stack, int size);
 void push_swap(t_stack *a, t_stack *b);
-void sa(t_stack *a);
 void parse_args(t_stack *a, int argc, char **argv);
 
 
 //		OPERATIONS
 
+void sa(t_stack *a);
+void sb(t_stack *b);
+void ss(t_stack *a, t_stack *b);
 void pa(t_stack *a, t_stack *b);
 void pb(t_stack *a, t_stack *b);
+void ra(t_stack *a);
+void rb(t_stack *b);
+void rr(t_stack *a,t_stack *b);
+void rra(t_stack *a);
+void rrb(t_stack *b);
+void rrr(t_stack *a, t_stack *b);
 
 
 #endif
