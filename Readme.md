@@ -1,7 +1,22 @@
 
-mettre ft_printf et ft_atoi
+mettre ft_printf
 
-je doit faire tout les message derreur (mon premier messqge derreur ne fonctionne pas correctement)
+
+PROBLEME:
+
+entre "" ca na pas lair de trier correctement
+
+ca fonctionne avec des nombres doubles alors que ca devrait retourner une erreur
+
+verifier avec int_min et int_max
+
+./push_swap 1 -- 45 32 (cert exemple passe et ca ne devrait pas)
+
+
+
+
+
+
 
 
 

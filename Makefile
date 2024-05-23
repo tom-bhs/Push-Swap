@@ -4,7 +4,9 @@ SRC =	src/main.c \
 		src/push_swap.c \
 		src/operations.c \
 		src/ft_error.c \
-		src/utils.c
+		src/utils.c \
+		src/more_utils.c
+
 OBJ = $(SRC:.c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror

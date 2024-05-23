@@ -6,7 +6,7 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:35:42 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/21 23:39:50 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/23 18:44:08 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ typedef struct	s_stack
 	int size;
 } t_stack;
 
+int		error(void);
+int		ft_isdigit(int i);
+int		ft_atoi(const char *str);
+void	if_not_number(char *str);
 void	init_stack(t_stack *stack, int size);
 void	push_swap(t_stack *a, t_stack *b);
 void	parse_args(t_stack *a, int argc, char **argv);
@@ -34,6 +38,7 @@ int		get_bit(int num, int bit);
 
 
 //		OPERATIONS
+
 
 void sa(t_stack *a);
 void sb(t_stack *b);
@@ -49,6 +54,7 @@ void rrr(t_stack *a, t_stack *b);
 
 
 //		ERROR
+
 
 void	check_space(char *str);
 
