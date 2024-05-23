@@ -10,6 +10,9 @@ verifier avec int_min et int_max
 
 ./push_swap 1 -- 45 32 (cert exemple passe et ca ne devrait pas)
 
+gerer les nombres negatifs 
+
+
 
 
 

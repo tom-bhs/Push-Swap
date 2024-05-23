@@ -6,7 +6,7 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 16:36:43 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/23 22:08:41 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/23 22:42:36 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,3 +61,35 @@ void	push_swap(t_stack *a, t_stack *b)
 		i++;
 	}
 }
+
+
+// void push_swap(t_stack *a, t_stack *b)
+// {
+    // int max_bits = get_max_bits(a);
+    // int size = a->size;
+// 
+    // for (int i = 0; i < max_bits; i++)
+    // {
+        // int num_pushes = 0;
+        // for (int j = 0; j < size; j++)
+        // {
+            // if ((a->data[0] >> i) & 1)
+            // {
+                // ra(a);
+                // write(1, "ra\n", 3);
+            // }
+            // else
+            // {
+                // pb(a, b);
+                // write(1, "pb\n", 3);
+                // num_pushes++;
+            // }
+        // }
+        // while (num_pushes--)
+        // {
+            // pa(a, b);
+            // write(1, "pa\n", 3);
+        // }
+    // }
+// }
+// 
