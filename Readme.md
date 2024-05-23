@@ -6,17 +6,9 @@ PROBLEME:
 
 entre "" ca na pas lair de trier correctement
 
-ca fonctionne avec des nombres doubles alors que ca devrait retourner une erreur
-
 verifier avec int_min et int_max
 
 ./push_swap 1 -- 45 32 (cert exemple passe et ca ne devrait pas)
-
-
-
-
-
-
 
 
 
@@ -25,7 +17,7 @@ https://github.com/nessrinemaalem/push_swap
 
 
 sa (échanger a) : échanger les deux premiers nombres de A
-
+ 
 sb (swap b) : échangez les deux premiers nombres de B
 
 ss : sa + qn

@@ -6,7 +6,7 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 19:06:26 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/23 18:26:58 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/23 21:49:33 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 // 	printf("Error\n"); //ft_printf
 // }
 
-int	error(void)
+int	print_error(void)
 {
 	write(1, "Error\n", 6);
 	exit(1);
@@ -42,7 +42,26 @@ void	if_not_number(char *str)
 	while (str[i])
 	{
 		if (!ft_isdigit(str[i]))
-			error();
+			print_error();
+		i++;
+	}
+}
+
+void	if_doubles(int *data, int size)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while(i < size - 1)
+	{
+		j = i + 1;
+		while (j < size)
+		{
+			if (data[i] == data[j])
+				print_error();
+			j++;
+		}
 		i++;
 	}
 }
