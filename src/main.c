@@ -6,7 +6,7 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 17:41:41 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/23 21:53:36 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/25 19:58:34 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,3 +45,4 @@ int	main(int argc, char **argv)
 	free(b.data);
 	return (0);
 }
+

@@ -6,12 +6,14 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:35:42 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/23 21:46:09 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/25 20:03:53 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+
+#include "../inc/libft/libft.h"
 
 #include <unistd.h>
 #include <stdlib.h>
@@ -30,16 +32,16 @@ typedef struct	s_stack
 //		GENERAL		//
 
 
-int		ft_isdigit(int i);
-int		ft_atoi(const char *str);
 int		get_max_bits(t_stack *stack);
 int		get_bit(int num, int bit);
 void	init_stack(t_stack *stack, int size);
 void	push_swap(t_stack *a, t_stack *b);
 void	parse_args(t_stack *a, int argc, char **argv);
+// void	check_args(int argc, char **argv);
 
 
-//		OPERATIONS		//
+
+//		MOVE		//
 
 
 void sa(t_stack *a);
@@ -59,8 +61,14 @@ void rrr(t_stack *a, t_stack *b);
 
 
 int		print_error(void);
-void	check_space(char *str);
-void	if_not_number(char *str);
+void	exit_error(const char *mess);
+
+
+// 		UTILS		//
+
 void	if_doubles(int *data, int size);
+void	if_not_number(char *str);
+// void	free_tab(char **argv);
+// void	argv_verif(int argc, char **argv);
 
 #endif

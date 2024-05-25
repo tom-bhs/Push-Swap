@@ -6,30 +6,16 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 19:06:26 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/23 21:49:33 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/25 19:58:12 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// void	check_space(char *str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (str[i] != '\0')
-// 	{
-// 		if (str[i] == ' ')
-// 			return ;
-// 		i++;
-// 	}
-// 	printf("Error\n"); //ft_printf
-// }
-
 int	print_error(void)
 {
 	write(1, "Error\n", 6);
-	exit(1);
+	exit(EXIT_FAILURE);
 }
 
 void	if_not_number(char *str)
