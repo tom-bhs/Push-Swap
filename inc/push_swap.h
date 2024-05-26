@@ -6,7 +6,7 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/29 17:35:42 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/25 20:03:53 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/26 20:01:37 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 # define PUSH_SWAP_H
 
 #include "../inc/libft/libft.h"
+//#include "../inc/libft/ft_printf.h"
 
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
 
-#define INT_MAX 2147483647
-#define INT_MIN -2147483648
 
 typedef struct	s_stack
 {

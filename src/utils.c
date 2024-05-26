@@ -6,19 +6,19 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 17:41:31 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/25 20:04:55 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/26 20:03:11 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	init_stack(t_stack *stack, int size) //pour initiaiser la stack 
+void	init_stack(t_stack *stack, int size)
 {
 	stack->data = (int *)malloc(sizeof(int) * size);
 	if (!stack->data)
 	{
-		printf("Error allocating memory"); //ft_printf
-		exit(EXIT_FAILURE); //verif si exit cest ok
+		ft_printf("Error allocating memory");
+		exit(EXIT_FAILURE);
 	}
 	stack->size = 0;
 }

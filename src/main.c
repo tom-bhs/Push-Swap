@@ -6,7 +6,7 @@
 /*   By: tbihoues <tbihoues@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 17:41:41 by tbihoues          #+#    #+#             */
-/*   Updated: 2024/05/25 19:58:34 by tbihoues         ###   ########.fr       */
+/*   Updated: 2024/05/26 20:02:25 by tbihoues         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	main(int argc, char **argv)
 	int		i;
 	t_stack	a;
 	t_stack	b;
+	char	**tab = NULL;
 
 	if (argc < 2)
 	{
@@ -24,14 +25,29 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	i = 1;
-	while (i < argc)
+	if (argc == 2)
 	{
-		if_not_number(argv[i]);
-		i++;
+		tab = ft_split(argv[1], ' ');
+		while (tab[i] != NULL)
+		{
+			if_not_number(tab[i]);
+			i++;
+		}
 	}
-	init_stack(&a, argc -1);
-	init_stack(&b, argc -1);
-	parse_args(&a, argc, argv); //pour afficher la pile pour verif le parsing
+	else
+	{
+		while (i < argc)
+		{
+			if_not_number(argv[i]);
+			i++;
+		}
+	}
+	init_stack(&a, i -1);
+	init_stack(&b, i -1);
+	if (tab != NULL)
+		parse_args(&a, i, tab);
+	else
+		parse_args(&a, argc, argv);
 	if_doubles(a.data, a.size);
 	i = 0;
 	while (i < a.size)
@@ -39,7 +55,7 @@ int	main(int argc, char **argv)
 		printf("%d", a.data[i]);
 		i++;
 	}
-	printf("\n"); //ft_printf
+	ft_printf("\n");
 	push_swap(&a, &b);
 	free(a.data);
 	free(b.data);
